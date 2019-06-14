@@ -1,0 +1,41 @@
+@import '../../_sass/abstracts/variables';
+@import '../../_sass/components/card';
+
+
+.title {
+    margin-top: 50px;
+    margin-left: 45px;
+    color: $font_color;
+}
+
+.section__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    margin-top: 50px; 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+.form input, .form select{
+    height: 30px;
+    color: black;
+}
+
+// .form select {
+//     height: 50px;
+// }
+
+// .order-btn {
+//     width: 100%;
+//     background-color: $main_color;
+//     padding: 15px;
+//     color: $background_color;
+//     font-size: 1em;
+//     border-radius: 5px;
+// }

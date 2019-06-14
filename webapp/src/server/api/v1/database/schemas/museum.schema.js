@@ -7,7 +7,8 @@ const { Schema } = mongoose;
 const MuseumSchema = new Schema(
     {
         name: { type: String, required: true, max: 128 },
-        amount: { type: Number, required: true },
+        location: { type: String, required: true, max: 128 },
+        description: { type: String, required: true },
         slug: {
             type: String, lowercase: true, unique: true, required: true,
         },

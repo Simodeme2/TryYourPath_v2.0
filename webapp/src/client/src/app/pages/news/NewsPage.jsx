@@ -7,11 +7,11 @@ import React, { Component } from 'react';
 Import internal libraries
 */
 import Api from '../../services';
-import PostsListPaged from '../../components/posts-list-paged';
+import MuseaListPaged from '../../components/musea-list-paged';
 
 class NewsPage extends Component {
     state = {
-        posts: [],
+        musea: [],
         pagination: {
             limit: 5,
             page: 1,
@@ -21,18 +21,18 @@ class NewsPage extends Component {
     };
 
     componentWillMount() {
-        this.loadPosts(1);
+        this.loadMusea(1);
     }
 
-    loadPosts = (pageIndex) => {
+    loadMusea = (pageIndex) => {
         console.log(pageIndex);
-        Api.findAllPosts({ limit: 3, skip: pageIndex })
+        Api.findAllMusea({ limit: 3, skip: pageIndex })
             .then((data) => {
-                const prevPosts = this.state.posts;
-                const newPosts = [...prevPosts, ...data.docs];
+                const prevMusea = this.state.musea;
+                const newMusea = [...prevMusea, ...data.docs];
                 this.setState(prevState => ({
                     ...prevState,
-                    posts: newPosts,
+                    musea: newMusea,
                     pagination: {
                         limit: data.limit,
                         page: data.page,
@@ -46,17 +46,19 @@ class NewsPage extends Component {
             });
     }
 
-    goToPostDetailPage = (id) => {
+    goToMuseumDetailPage = (id) => {
         this.props.history.push(`/news/${id}`);
     }
 
     render() {
-        const { pagination, posts } = this.state;
+        const { pagination, musea } = this.state;
         return (
             <React.Fragment>
-                <h1 className="hidden">Nieuws</h1>
-                <section className="section section--articles">
-                    <PostsListPaged posts={posts} pagination={pagination} onReadMore={this.goToPostDetailPage} onLoadMore={this.loadPosts} />
+                <h1 className="hidden">Musea</h1>
+                <section className="section section--overview">
+                    <div className="section__content">    
+                        <MuseaListPaged musea={musea} pagination={pagination} onReadMore={this.goToMuseumDetailPage} onLoadMore={this.loadMusea} />
+                    </div>
                 </section>
             </React.Fragment>
         )

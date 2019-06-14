@@ -137,27 +137,22 @@ class Seeder {
         }
     }
 
-    museumCreate = async (name, location) => {
-        // const museumDetail = {
-        //     name,
-        //     location,
-        // };
-        // const museum = new Museum(museumDetail);
+    museumCreate = async (name, location, description) => {
+        const museumDetail = {
+            name,
+            location,
+            description,
+        };
+        const museum = new Museum(museumDetail);
 
-        // try {
-        //     const newMuseum = await museum.save();
-        //     this.musea.push(newMuseum);
+        try {
+            const newMuseum = await museum.save();
+            this.musea.push(newMuseum);
 
-        //     logger.log({ level: 'info', message: `Museum created with id: ${newMuseum.id}!` });
-        // } catch (err) {
-        //     logger.log({ level: 'info', message: `An error occurred when creating a museum: ${err}!` });
-        // }
-        await Promise.all([
-            (async () => this.categoryCreate(faker.lorem.word(), faker.lorem.sentence()))(),
-            (async () => this.categoryCreate(faker.lorem.word(), faker.lorem.sentence()))(),
-            (async () => this.categoryCreate(faker.lorem.word(), faker.lorem.sentence()))(),
-            (async () => this.categoryCreate(faker.lorem.word(), faker.lorem.sentence()))(),
-        ]);
+            logger.log({ level: 'info', message: `Museum created with id: ${newMuseum.id}!` });
+        } catch (err) {
+            logger.log({ level: 'info', message: `An error occurred when creating a museum: ${err}!` });
+        }
     }
 
     createBlogs = async () => {
@@ -220,6 +215,26 @@ class Seeder {
         ]);
     }
 
+    createMusea = async () => {
+        await Promise.all([
+            (async () => this.museumCreate(faker.company.companyName(),
+                faker.address.secondaryAddress(), faker.lorem.text()))(),
+            (async () => this.museumCreate(faker.company.companyName(),
+                faker.address.secondaryAddress(), faker.lorem.text()))(),
+            (async () => this.museumCreate(faker.company.companyName(),
+                faker.address.secondaryAddress(), faker.lorem.text()))(),
+            (async () => this.museumCreate(faker.company.companyName(),
+                faker.address.secondaryAddress(), faker.lorem.text()))(),
+            (async () => this.museumCreate(faker.company.companyName(),
+                faker.address.secondaryAddress(), faker.lorem.text()))(),
+            (async () => this.museumCreate(faker.company.companyName(),
+                faker.address.secondaryAddress(), faker.lorem.text()))(),
+            (async () => this.museumCreate(faker.company.companyName(),
+                faker.address.secondaryAddress(), faker.lorem.text()))(),
+
+        ]);
+    }
+
     getRandomCategory = () => {
         let category = null;
         if (this.categories && this.categories.length > 0) {
@@ -241,6 +256,14 @@ class Seeder {
     }
 
     getRandomUser = () => {
+        let user = null;
+        if (this.users && this.users.length > 0) {
+            user = this.users[Math.round(Math.random() * (this.users.length - 1))];
+        }
+        return user;
+    }
+
+    getRandomCompany = () => {
         let user = null;
         if (this.users && this.users.length > 0) {
             user = this.users[Math.round(Math.random() * (this.users.length - 1))];

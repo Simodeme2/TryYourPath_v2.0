@@ -35,6 +35,38 @@ class HomePage extends Component {
     // goToPostDetailPage = (id) => {
     //     this.props.history.push(`/news/${id}`);
     // }
+    createTable = () => {
+        let table = []
+    
+        // Outer loop to create parent
+        for (let i = 0; i < 8; i++) {
+            table.push(
+                <div className="card">
+                    <div className="card__header">
+                        <img src="https://picsum.photos/400/200" alt="image" className="card__image"/>
+                    </div>
+                    <div className="card__content">
+                        <h2 className="card__title">Museum SCI-FI</h2>
+                        <p className="card__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in magna sem. Curabitur non mauris sit amet risus interdum rutrum a quis justo.
+                        </p>
+                        <div className="card__list">
+                            <ul>
+                                <li>Sci-Fi</li>
+                                <li>Space</li>
+                                <li>Robots</li>
+                                <li>Computers</li>
+                            </ul>
+                        </div>
+                        <div className="card__btn">
+                            <a href='/order-ticket' className="order-btn">Bestel Tickets</a>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        return table
+      }
 
     render() {
         // const { posts } = this.state;
@@ -53,184 +85,9 @@ class HomePage extends Component {
                     </footer>
                 </section> */}
 
-                <section className="section section--overview">
+                 <section className="section section--overview">
                     <div className="section__content">
-                        <div className="card">
-                            <div className="card__header">
-                                <img src="https://picsum.photos/400/200" alt="image" className="card__image"/>
-                            </div>
-                            <div className="card__content">
-                                <h2 className="card__title">Museum SCI-FI</h2>
-                                <p className="card__description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in magna sem. Curabitur non mauris sit amet risus interdum rutrum a quis justo.
-                                </p>
-                                <div className="card__list">
-                                    <ul>
-                                        <li>Sci-Fi</li>
-                                        <li>Space</li>
-                                        <li>Robots</li>
-                                        <li>Computers</li>
-                                    </ul>
-                                </div>
-                                <div className="card__btn">
-                                    <a href="#" className="order-btn">Bestel Tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card__header">
-                                <img src="https://picsum.photos/400/200" alt="image" className="card__image"/>
-                            </div>
-                            <div className="card__content">
-                                <h2 className="card__title">Museum SCI-FI</h2>
-                                <p className="card__description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in magna sem. Curabitur non mauris sit amet risus interdum rutrum a quis justo.
-                                </p>
-                                <div className="card__list">
-                                    <ul>
-                                        <li>Sci-Fi</li>
-                                        <li>Space</li>
-                                        <li>Robots</li>
-                                        <li>Computers</li>
-                                    </ul>
-                                </div>
-                                <div className="card__btn">
-                                    <a href="#" className="order-btn">Bestel Tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card__header">
-                                <img src="https://picsum.photos/400/200" alt="image" className="card__image"/>
-                            </div>
-                            <div className="card__content">
-                                <h2 className="card__title">Museum SCI-FI</h2>
-                                <p className="card__description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in magna sem. Curabitur non mauris sit amet risus interdum rutrum a quis justo.
-                                </p>
-                                <div className="card__list">
-                                    <ul>
-                                        <li>Sci-Fi</li>
-                                        <li>Space</li>
-                                        <li>Robots</li>
-                                        <li>Computers</li>
-                                    </ul>
-                                </div>
-                                <div className="card__btn">
-                                    <a href="#" className="order-btn">Bestel Tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card__header">
-                                <img src="https://picsum.photos/400/200" alt="image" className="card__image"/>
-                            </div>
-                            <div className="card__content">
-                                <h2 className="card__title">Museum SCI-FI</h2>
-                                <p className="card__description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in magna sem. Curabitur non mauris sit amet risus interdum rutrum a quis justo.
-                                </p>
-                                <div className="card__list">
-                                    <ul>
-                                        <li>Sci-Fi</li>
-                                        <li>Space</li>
-                                        <li>Robots</li>
-                                        <li>Computers</li>
-                                    </ul>
-                                </div>
-                                <div className="card__btn">
-                                    <a href="#" className="order-btn">Bestel Tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card__header">
-                                <img src="https://picsum.photos/400/200" alt="image" className="card__image"/>
-                            </div>
-                            <div className="card__content">
-                                <h2 className="card__title">Museum SCI-FI</h2>
-                                <p className="card__description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in magna sem. Curabitur non mauris sit amet risus interdum rutrum a quis justo.
-                                </p>
-                                <div className="card__list">
-                                    <ul>
-                                        <li>Sci-Fi</li>
-                                        <li>Space</li>
-                                        <li>Robots</li>
-                                        <li>Computers</li>
-                                    </ul>
-                                </div>
-                                <div className="card__btn">
-                                    <a href="#" className="order-btn">Bestel Tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card__header">
-                                <img src="https://picsum.photos/400/200" alt="image" className="card__image"/>
-                            </div>
-                            <div className="card__content">
-                                <h2 className="card__title">Museum SCI-FI</h2>
-                                <p className="card__description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in magna sem. Curabitur non mauris sit amet risus interdum rutrum a quis justo.
-                                </p>
-                                <div className="card__list">
-                                    <ul>
-                                        <li>Sci-Fi</li>
-                                        <li>Space</li>
-                                        <li>Robots</li>
-                                        <li>Computers</li>
-                                    </ul>
-                                </div>
-                                <div className="card__btn">
-                                    <a href="#" className="order-btn">Bestel Tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card__header">
-                                <img src="https://picsum.photos/400/200" alt="image" className="card__image"/>
-                            </div>
-                            <div className="card__content">
-                                <h2 className="card__title">Museum SCI-FI</h2>
-                                <p className="card__description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in magna sem. Curabitur non mauris sit amet risus interdum rutrum a quis justo.
-                                </p>
-                                <div className="card__list">
-                                    <ul>
-                                        <li>Sci-Fi</li>
-                                        <li>Space</li>
-                                        <li>Robots</li>
-                                        <li>Computers</li>
-                                    </ul>
-                                </div>
-                                <div className="card__btn">
-                                    <a href="#" className="order-btn">Bestel Tickets</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card__header">
-                                <img src="https://picsum.photos/400/200" alt="image" className="card__image"/>
-                            </div>
-                            <div className="card__content">
-                                <h2 className="card__title">Museum SCI-FI</h2>
-                                <p className="card__description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in magna sem. Curabitur non mauris sit amet risus interdum rutrum a quis justo.
-                                </p>
-                                <div className="card__list">
-                                    <ul>
-                                        <li>Sci-Fi</li>
-                                        <li>Space</li>
-                                        <li>Robots</li>
-                                        <li>Computers</li>
-                                    </ul>
-                                </div>
-                                <div className="card__btn">
-                                    <a href="#" className="order-btn">Bestel Tickets</a>
-                                </div>
-                            </div>
-                        </div>
+                    {this.createTable()}
                     </div>
                 </section>
             </React.Fragment>

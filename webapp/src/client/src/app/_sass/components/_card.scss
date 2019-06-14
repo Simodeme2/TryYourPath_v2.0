@@ -28,6 +28,9 @@
     padding: 15px;
 
   }
+  &__description {
+    color: gray;
+  }
   &__btn {
     background-color: $main-color;
     text-align: center;

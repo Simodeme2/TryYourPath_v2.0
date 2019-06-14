@@ -16,6 +16,21 @@
     margin-top: 50px; 
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+.form input, .form select{
+    height: 30px;
+    color: black;
+}
+
+// .form select {
+//     height: 50px;
+// }
+
 // .order-btn {
 //     width: 100%;
 //     background-color: $main_color;

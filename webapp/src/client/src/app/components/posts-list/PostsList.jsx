@@ -19,6 +19,7 @@ class PostsLists extends Component {
     render() {
         const { posts } = this.props;
 
+
         return (
             <React.Fragment>
                 {posts && posts.map( (post, index) => (
