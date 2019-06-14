@@ -1,0 +1,23 @@
+.nav {
+    background-color: $blue_color;
+
+    > ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+
+        :hover {
+            background-color: $hover_color;
+        }
+
+        > a {
+            padding: 16px;
+            text-decoration: none;
+
+            
+            > li {
+                color: $background_color;
+            }
+        }
+    }
+}

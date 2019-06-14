@@ -1,0 +1,43 @@
+.card {
+  width: 400px;
+  margin-bottom: 50px;
+  background-color: white;
+  color: $font-color;
+
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+	-moz-box-shadow: 0 10px 6px -6px #777;
+	box-shadow: 0 10px 6px -6px #777;
+
+  &__title {
+    margin-top: -10 px;
+  }
+  &__sub-title {
+
+  }
+  &__header {
+  
+  }
+  &__footer {
+
+  }
+  &__image {
+
+  }
+  &__content {
+    margin: 15px;
+    padding: 15px;
+
+  }
+  &__btn {
+    background-color: $main-color;
+    text-align: center;
+    padding: 15px;
+    border-radius: 7px;
+    margin-top: 30px;
+
+    > a {
+      text-decoration: none;
+      color: $background_color;
+    }
+  }
+}
