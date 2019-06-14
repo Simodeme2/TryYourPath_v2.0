@@ -29,7 +29,8 @@
 
   }
   &__description {
-    color: gray;
+    overflow-y: scroll;
+    height: 100px;
   }
   &__btn {
     background-color: $main-color;

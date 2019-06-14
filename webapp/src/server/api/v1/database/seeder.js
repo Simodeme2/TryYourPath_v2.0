@@ -218,19 +218,19 @@ class Seeder {
     createMusea = async () => {
         await Promise.all([
             (async () => this.museumCreate(faker.company.companyName(),
-                faker.address.secondaryAddress(), faker.lorem.text()))(),
+                faker.address.secondaryAddress(), faker.lorem.text(), faker.image.imageUrl()))(),
             (async () => this.museumCreate(faker.company.companyName(),
-                faker.address.secondaryAddress(), faker.lorem.text()))(),
+                faker.address.secondaryAddress(), faker.lorem.text(), faker.image.imageUrl()))(),
             (async () => this.museumCreate(faker.company.companyName(),
-                faker.address.secondaryAddress(), faker.lorem.text()))(),
+                faker.address.secondaryAddress(), faker.lorem.text(), faker.image.imageUrl()))(),
             (async () => this.museumCreate(faker.company.companyName(),
-                faker.address.secondaryAddress(), faker.lorem.text()))(),
+                faker.address.secondaryAddress(), faker.lorem.text(), faker.image.imageUrl()))(),
             (async () => this.museumCreate(faker.company.companyName(),
-                faker.address.secondaryAddress(), faker.lorem.text()))(),
+                faker.address.secondaryAddress(), faker.lorem.text(), faker.image.imageUrl()))(),
             (async () => this.museumCreate(faker.company.companyName(),
-                faker.address.secondaryAddress(), faker.lorem.text()))(),
+                faker.address.secondaryAddress(), faker.lorem.text(), faker.image.imageUrl()))(),
             (async () => this.museumCreate(faker.company.companyName(),
-                faker.address.secondaryAddress(), faker.lorem.text()))(),
+                faker.address.secondaryAddress(), faker.lorem.text(), faker.image.imageUrl()))(),
 
         ]);
     }

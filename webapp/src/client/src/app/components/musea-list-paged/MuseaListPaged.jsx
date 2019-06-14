@@ -35,7 +35,7 @@ class MuseaListsPaged extends Component {
                                     </div>
                                     <div className="card__content">
                                         <h2 className="card__title">{ museum.name }</h2>
-                                        <p className="card__description">{ museum.location }</p>
+                                        <p className="card__location">{ museum.location }</p>
                                         <p className="card__description">{ museum.description }
                                         </p>
                                         <div className="card__btn">
