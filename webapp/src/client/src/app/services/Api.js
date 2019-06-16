@@ -11,7 +11,7 @@ class Api {
     }
 
     static findOnePost = async (id) => {
-        const response = await fetch(`${this.URL}/posts/${id}`);
+        const response = await fetch(`${this.URL}/musea/${id}`);
         return await response.json();
     }
 

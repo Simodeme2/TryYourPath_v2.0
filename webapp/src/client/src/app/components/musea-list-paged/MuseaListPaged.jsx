@@ -10,6 +10,12 @@ Styling
 import './MuseaListPaged.scss'
 
 class MuseaListsPaged extends Component {
+    readTicketsHandler = (ev, id) => {
+        ev.preventDefault();
+        if (typeof this.props.onReadTickets === 'function') {
+            this.props.onReadTickets(id);
+        }
+    }
     readMoreHandler = (ev, id) => {
         ev.preventDefault();
         if (typeof this.props.onReadMore === 'function') {
@@ -39,7 +45,7 @@ class MuseaListsPaged extends Component {
                                         <p className="card__description">{ museum.description }
                                         </p>
                                         <div className="card__btn">
-                                            <a href='/order-ticket' className="order-btn">Bestel Tickets</a>
+                                            <button className="order-btn" onClick={(ev) => this.readTicketsHandler(ev, museum.id)}>Bestel Tickets</button>
                                         </div>
                                         <button onClick={(ev) => this.readMoreHandler(ev, museum.id)}>More</button>
                                     </div>

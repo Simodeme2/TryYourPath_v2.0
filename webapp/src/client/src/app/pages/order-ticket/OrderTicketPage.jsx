@@ -10,12 +10,6 @@ import Api from '../../services';
 import PostsList from '../../components/posts-list';
 
 class OrderTicketPage extends Component {
-
-
-    goToPostDetailPage = (id) => {
-        this.props.history.push(`/news/${id}`);
-    }
-
     render() {
         // const { posts } = this.state;
         return (

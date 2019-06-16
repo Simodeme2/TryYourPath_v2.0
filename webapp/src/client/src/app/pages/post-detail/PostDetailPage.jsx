@@ -7,11 +7,11 @@ import React, { Component } from 'react';
 Import internal libraries
 */
 import Api from '../../services';
-import PostDetail from '../../components/post-detail';
+import MuseumDetail from '../../components/musea-detail';
 
 class PostDetailPage extends Component {
     state = {
-        post: null,
+        museum: null,
     };
 
     componentWillMount() {
@@ -23,7 +23,7 @@ class PostDetailPage extends Component {
             .then((data) => {
                 this.setState(prevState => ({
                     ...prevState,
-                    post: data
+                    museum: data
                 }));
             })
             .catch((error) => {
@@ -32,11 +32,11 @@ class PostDetailPage extends Component {
     }
 
     render() {
-        const { post } = this.state;
-        console.log(post);
+        const { museum } = this.state;
+        console.log(museum);
         return (
             <React.Fragment>
-                <PostDetail data={post} />
+                <MuseumDetail data={museum} />
             </React.Fragment>
         )
     }

@@ -26,7 +26,7 @@ class NewsPage extends Component {
 
     loadMusea = (pageIndex) => {
         console.log(pageIndex);
-        Api.findAllMusea({ limit: 3, skip: pageIndex })
+        Api.findAllMusea({ limit: 6, skip: pageIndex })
             .then((data) => {
                 const prevMusea = this.state.musea;
                 const newMusea = [...prevMusea, ...data.docs];
@@ -47,8 +47,14 @@ class NewsPage extends Component {
     }
 
     goToMuseumDetailPage = (id) => {
-        this.props.history.push(`/news/${id}`);
+        this.props.history.push(`/musea/${id}`);
     }
+
+    goToTicketsPage = (id) => {
+        this.props.history.push(`/order-ticket/${id}`)
+    }
+
+
 
     render() {
         const { pagination, musea } = this.state;
@@ -57,7 +63,7 @@ class NewsPage extends Component {
                 <h1 className="hidden">Musea</h1>
                 <section className="section section--overview">
                     <div className="section__content">    
-                        <MuseaListPaged musea={musea} pagination={pagination} onReadMore={this.goToMuseumDetailPage} onLoadMore={this.loadMusea} />
+                        <MuseaListPaged musea={musea} pagination={pagination} onReadMore={this.goToMuseumDetailPage} onLoadMore={this.loadMusea} onReadTickets={this.goToTicketsPage}/>
                     </div>
                 </section>
             </React.Fragment>

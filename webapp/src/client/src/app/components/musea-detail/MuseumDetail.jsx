@@ -18,9 +18,9 @@ class MuseumDetail extends Component {
             <React.Fragment>
                 {museum ? (
                     <article key={ museum.id } className={classNames("museum--large")}>
-                        <h1 className="museum__title">{ museum.title }</h1>
-                        <div className="museum__synopsis">{ museum.synopsis }</div>
-                        <div className="museum__body">{Parser(museum.body)}</div>
+                        <h1 className="museum__title">{ museum.name }</h1>
+                        <div className="museum__synopsis">{ museum.location }</div>
+                        <div className="museum__synopsis">{ museum.description }</div>
                     </article>
                 ) : '<p>LOADING</p>'}
             </React.Fragment>
